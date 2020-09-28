@@ -20,11 +20,12 @@
   </properties>
 
   <dependencies>
+    <!--单元测试-->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
-      <scope>test</scope>
+      <scope>compile</scope>
     </dependency>
     <!--日志-->
     <!-- https://mvnrepository.com/artifact/log4j/log4j -->
@@ -54,7 +55,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.12</version>
+      <version>1.18.8</version>
       <scope>provided</scope>
     </dependency>
 
@@ -205,10 +206,17 @@
       <artifactId>spring-context-support</artifactId>
       <version>3.2.3.RELEASE</version>
     </dependency>
+
     <dependency>
       <groupId>org.freemarker</groupId>
       <artifactId>freemarker</artifactId>
       <version>2.3.20</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.1</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 
