@@ -16,7 +16,7 @@
    ">
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:src/main/resources/database.properties"/>
+        <property name="location" value="classpath:database.properties"/>
     </bean>
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
@@ -27,7 +27,7 @@
     </bean>
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
-        <property name="configLocation" value="classpath:src/main/resources/MyBatis-config.xml"/>
+        <property name="configLocation" value="classpath:MyBatis-config.xml"/>
         <property name="mapperLocations">
             <list>
                 <value>classpath:mapper/*Mapper.xml </value>
@@ -35,9 +35,9 @@
         </property>
     </bean>
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.kgc.mapper"/>
+        <property name="basePackage" value="com.kgc.tcmp077.wangyf.mapper"/>
     </bean>
-    <context:component-scan base-package="com.kgc.service"></context:component-scan>
+    <context:component-scan base-package="com.kgc.tcmp077.wangyf.service"></context:component-scan>
 
     <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager" id="transactionManager">
         <property name="dataSource" ref="dataSource"/>
