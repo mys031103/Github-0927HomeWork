@@ -3,12 +3,16 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-
-    <properties resource="database.properties" />
+    <!--设置日志-->
     <settings>
         <setting name="logImpl" value="LOG4J"/>
+        <!--把映射级别改成全映射-->
         <setting name="autoMappingBehavior" value="FULL"/>
     </settings>
+    <!--<typeAliases>
+        &lt;!&ndash;<typeAlias type="cn.kgc.testmybatis01.pojo.User" alias="User"/>&ndash;&gt;
+        <package name="cn.kgc.pojo"/>
+    </typeAliases>-->
     <plugins>
         <plugin interceptor="com.github.pagehelper.PageHelper">
             <!--  该参数默认为false -->
